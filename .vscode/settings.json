@@ -1,10 +1,17 @@
 {
   "cSpell.words": [
+    "bigserial",
     "extname",
     "ossp",
     "pgcrypto",
+    "plpgsql",
     "proname",
+    "schemaname",
     "Sortability",
+    "tablename",
+    "tableowner",
+    "timestamptz",
+    "TRUNC",
     "urandom",
     "uuidv",
     "VARCHAR"
