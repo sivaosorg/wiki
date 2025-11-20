@@ -1242,29 +1242,4 @@ CREATE TABLE job_execution_logs (
     -- Constraints
     CHECK (log_level IN ('debug', 'info', 'warning', 'error'))
 );
-
--- Recurring Jobs Configuration
-CREATE TABLE recurring_jobs (
-    -- Primary Key
-    id bigserial PRIMARY KEY,
-
-    -- Job Definition
-    job_type varchar(100) NOT NULL,
-    job_name varchar(255) NOT NULL,
-    description text,
-
-    -- Schedule Configuration
-    cron_expression varchar(100) NOT NULL,  -- e.g., '0 9 * * MON-FRI'
-    timezone varchar(50) NOT NULL DEFAULT 'UTC',
-
-    -- Timing
-    created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    activated_at timestamptz DEFAULT NULL,
-    deactivated_at timestamptz DEFAULT NULL,
-
-    -- Last Execution
-    last_executed_at timestamptz DEFAULT NULL,
-    next_execution_at timestamptz,
-
 ```
